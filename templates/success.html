@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thanks for your order!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <form action="{% url 'portal_session' %}?session_id={{session_id}}" method="POST">
+        {%csrf_token%}
+      <input type="hidden" id="session-id" name="session_id" value="" />
+      <button id="checkout-and-portal-button" type="submit">Manage your billing information</button>
+    </form>
+  </section>
+</body>
+</html>

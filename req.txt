@@ -1,0 +1,4 @@
+django
+stripe
+django-environ
+psycopg2-binary

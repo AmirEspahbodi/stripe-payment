@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Subscribe to a cool new product</title>
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <section>
+      <form action="{% url 'checkout'%}" method="POST">
+        {% csrf_token %}
+        <!-- Add a hidden field with the lookup_key of your Price -->
+        <input type="hidden" name="lookup_key" value="{{PRICE_LOOKUP_KEY}}" />
+        <button id="checkout-and-portal-button" type="submit">Checkout</button>
+      </form>
+    </section>
+  </body>
+</html>
